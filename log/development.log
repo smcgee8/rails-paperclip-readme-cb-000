@@ -383,3 +383,15 @@ Processing by AuthorsController#new as HTML
   Rendered authors/_form.html.erb (2.4ms)
   Rendered authors/new.html.erb within layouts/application (3.0ms)
 Completed 200 OK in 27ms (Views: 17.0ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/authors" for 174.63.85.247 at 2018-02-07 20:12:22 +0000
+Cannot render console from 174.63.85.247! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AuthorsController#index as HTML
+  [1m[35mAuthor Load (0.2ms)[0m  SELECT "authors".* FROM "authors"
+  Rendered authors/index.html.erb within layouts/application (4.6ms)
+Completed 200 OK in 18ms (Views: 17.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/original/default-4d452c63d330fa4ca5200c3fa437bfd595741d59846222f62704f02365fdbc6c.png" for 174.63.85.247 at 2018-02-07 20:12:23 +0000
+Cannot render console from 174.63.85.247! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
