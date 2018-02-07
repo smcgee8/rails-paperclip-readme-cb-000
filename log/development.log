@@ -403,3 +403,43 @@ Processing by AuthorsController#index as HTML
   [1m[36mAuthor Load (0.7ms)[0m  [1mSELECT "authors".* FROM "authors"[0m
   Rendered authors/index.html.erb within layouts/application (10.9ms)
 Completed 200 OK in 34ms (Views: 28.5ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/authors" for 174.63.85.247 at 2018-02-07 20:14:24 +0000
+Cannot render console from 174.63.85.247! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AuthorsController#index as HTML
+  [1m[35mAuthor Load (0.2ms)[0m  SELECT "authors".* FROM "authors"
+  Rendered authors/index.html.erb within layouts/application (4.8ms)
+Completed 200 OK in 23ms (Views: 22.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/thumb/default-4d452c63d330fa4ca5200c3fa437bfd595741d59846222f62704f02365fdbc6c.png" for 174.63.85.247 at 2018-02-07 20:14:25 +0000
+Cannot render console from 174.63.85.247! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/authors/new" for 174.63.85.247 at 2018-02-07 20:14:29 +0000
+Cannot render console from 174.63.85.247! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AuthorsController#new as HTML
+  Rendered authors/_form.html.erb (3.9ms)
+  Rendered authors/new.html.erb within layouts/application (4.8ms)
+Completed 200 OK in 26ms (Views: 24.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/authors" for 174.63.85.247 at 2018-02-07 20:19:37 +0000
+Cannot render console from 174.63.85.247! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AuthorsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"42A7rtVYAooPZ41OjeyNYSvBfTN0tUnTVnl5WfccN6TVqcMg1TxbIRk21BZov1AX/X29O0xdPj8FvOu452VRgw==", "author"=>{"avatar"=>#<ActionDispatch::Http::UploadedFile:0x000000050af1b8 @tempfile=#<Tempfile:/tmp/RackMultipart20180207-976-1m5kapr.jpg>, @original_filename="2014-09-28 18.42.09-2.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"author[avatar]\"; filename=\"2014-09-28 18.42.09-2.jpg\"\r\nContent-Type: image/jpeg\r\n">, "name"=>"Sean", "bio"=>"Whattttt"}, "commit"=>"Create Author"}
+[paperclip] Trying to link /tmp/RackMultipart20180207-976-1m5kapr.jpg to /tmp/f50893d9a996439c69d670848ce5662e20180207-976-7zk63a.jpg
+[paperclip] Trying to link /tmp/f50893d9a996439c69d670848ce5662e20180207-976-7zk63a.jpg to /tmp/fbab9f3da78adb39a40d8bb6e8b54dee20180207-976-86vgz1.jpg
+Command :: file -b --mime '/tmp/fbab9f3da78adb39a40d8bb6e8b54dee20180207-976-86vgz1.jpg'
+Command :: identify -format '%wx%h,%[exif:orientation]' '/tmp/f50893d9a996439c69d670848ce5662e20180207-976-7zk63a.jpg[0]' 2>/dev/null
+Command :: identify -format %m '/tmp/f50893d9a996439c69d670848ce5662e20180207-976-7zk63a.jpg[0]'
+Command :: convert '/tmp/f50893d9a996439c69d670848ce5662e20180207-976-7zk63a.jpg[0]' -auto-orient -resize "100x100>" '/tmp/21b921a808ad754e49b783646d3be3ba20180207-976-rwmztd'
+[paperclip] Trying to link /tmp/21b921a808ad754e49b783646d3be3ba20180207-976-rwmztd to /tmp/3ac79b0e78f71604d8bb44719301afc420180207-976-lqfj2q
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+[paperclip] Trying to link /tmp/f50893d9a996439c69d670848ce5662e20180207-976-7zk63a.jpg to /tmp/fbab9f3da78adb39a40d8bb6e8b54dee20180207-976-gw7fu4.jpg
+Command :: file -b --mime '/tmp/fbab9f3da78adb39a40d8bb6e8b54dee20180207-976-gw7fu4.jpg'
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO "authors" ("bio", "name", "avatar_file_name", "avatar_content_type", "avatar_file_size", "avatar_updated_at", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)  [["bio", "Whattttt"], ["name", "Sean"], ["avatar_file_name", "2014-09-28_18.42.09-2.jpg"], ["avatar_content_type", "image/jpeg"], ["avatar_file_size", 2464854], ["avatar_updated_at", "2018-02-07 20:19:37.960502"], ["created_at", "2018-02-07 20:19:38.824275"], ["updated_at", "2018-02-07 20:19:38.824275"]]
+  [1m[36m (2.5ms)[0m  [1mcommit transaction[0m
+Redirected to http://165.227.81.218:37638/authors/5
+Completed 302 Found in 900ms (ActiveRecord: 3.2ms)
